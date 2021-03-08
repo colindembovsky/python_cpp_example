@@ -51,7 +51,7 @@ jobs:
     - name: Compile and package
       run: |
         cd components
-        python3 ./setup.py install --prefix %TEMP%/out
+        python3 ./setup.py install
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1

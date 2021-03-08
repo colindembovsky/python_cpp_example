@@ -21,7 +21,7 @@ jobs:
       - name: Compile and package
         run: |
           cd components
-          python3 ./setup.py install --prefix %TEMP%/out
+          python3 ./setup.py install
 
       - name: Test code
         run: |
