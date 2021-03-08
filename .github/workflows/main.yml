@@ -21,8 +21,10 @@ jobs:
 
       - name: Compile and package
         run: |
+          cd components
           python3 ./setup.py install --prefix /tmp/out
 
       - name: Test code
         run: |
+          cd components
           sudo python3 ./setup.py test
