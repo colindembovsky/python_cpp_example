@@ -12,8 +12,6 @@
 name: "CodeQL"
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ master ]
@@ -52,7 +50,8 @@ jobs:
 
     - name: Compile and package
       run: |
-        python3 ./setup.py install --prefix /tmp/out
+        cd components
+        python3 ./setup.py install --prefix %TEMP%/out
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
