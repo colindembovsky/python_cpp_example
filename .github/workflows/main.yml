@@ -22,7 +22,7 @@ jobs:
       - name: Compile and package
         run: |
           cd components
-          python3 ./setup.py install --prefix /tmp/out
+          python3 ./setup.py install --prefix %TEMP%/out
 
       - name: Test code
         run: |
