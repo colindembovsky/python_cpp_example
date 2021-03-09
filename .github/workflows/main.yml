@@ -25,4 +25,4 @@ jobs:
 
       - name: Test code
         run: |
-          python3 ./setup.py test --prefix /tmp/out
+          sudo python3 ./setup.py test
