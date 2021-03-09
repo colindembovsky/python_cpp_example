@@ -21,8 +21,8 @@ jobs:
 
       - name: Compile and package
         run: |
-          sudo python3 ./setup.py install
+          python3 ./setup.py install --prefix /tmp/out
 
       - name: Test code
         run: |
-          sudo ./build.sh
+          python3 ./setup.py test --prefix /tmp/out
