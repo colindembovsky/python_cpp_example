@@ -52,7 +52,7 @@ jobs:
 
     - name: Compile and package
       run: |
-        sudo build.sh
+        python3 ./setup.py install --prefix /tmp/out
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
