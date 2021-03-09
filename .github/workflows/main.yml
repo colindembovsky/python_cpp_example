@@ -25,4 +25,4 @@ jobs:
 
       - name: Test code
         run: |
-          sudo python3 ./setup.py test
+          sudo ./build.sh
