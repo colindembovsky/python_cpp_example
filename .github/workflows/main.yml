@@ -17,6 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install pybind11
+        run: |
+          wget https://github.com/pybind/pybind11/archive/v2.1.1.tar.gz
+          tar -xvf v2.1.1.tar.gz
+          mv -r pybind11-2.1.1 ./lib/pybind11
+
       - name: Compile and package
         run: |
           sudo python3 ./setup.py install
