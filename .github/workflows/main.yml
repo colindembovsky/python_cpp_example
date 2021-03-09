@@ -19,7 +19,7 @@ jobs:
 
       - name: Compile and package
         run: |
-          python3 ./setup.py install
+          sudo python3 ./setup.py install
 
       - name: Test code
         run: |
