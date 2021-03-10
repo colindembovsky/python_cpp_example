@@ -52,7 +52,7 @@ jobs:
 
     - name: Compile and package
       run: |
-        python3 ./setup.py install --prefix /tmp/out
+        python3 ./setup.py install --prefix %TEMP%/out
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
